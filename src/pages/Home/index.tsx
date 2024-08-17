@@ -1,10 +1,15 @@
 import Button from "src/components/button";
 import ButtonContainer from "src/components/button-container";
+import { useNavigate } from "react-router-dom";
 
 // TODO: add icons to all buttons
-// TODO: make buttons appear horizontally on desktop, vertically on mobile?
-// TODO: add margin below buttons
 export default function Home() {
+  const navigate = useNavigate();
+
+  const handleRedirect = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="grid h-screen w-screen justify-center">
       <div className="mb-10 text-center">
@@ -39,6 +44,30 @@ export default function Home() {
           </a>
           <a href="https://github.com/eristow/date-night-coding-challenge">
             <Button>Date Night Code</Button>
+          </a>
+        </ButtonContainer>
+        <h2>Other</h2>
+        <ButtonContainer>
+          <a href="https://habbit-rabbit.netlify.app">
+            <Button>Habbit Rabbit</Button>
+          </a>
+          <a>
+            <Button onClick={() => handleRedirect("/stocks")}>Stock App</Button>
+          </a>
+          <a>
+            <Button onClick={() => handleRedirect("/radio")}>
+              Radio (WIP)
+            </Button>
+          </a>
+          <a>
+            <Button onClick={() => handleRedirect("/recipe-calculator")}>
+              Recipe Calculator
+            </Button>
+          </a>
+          <a>
+            <Button onClick={() => handleRedirect("/tic-tac-toe")}>
+              Tic Tac Toe
+            </Button>
           </a>
         </ButtonContainer>
       </div>
