@@ -4,9 +4,16 @@ Hosted on GitHub Pages.
 
 ## TODO
 - [ ] Grab code from old portfolio
+  - [ ] Header
+  - [ ] Radio
+  - [ ] Tic Tac Toe
 
 - [ ] Improve styling
-  - [ ] Use Tailwind CSS instead of Styled Components
+  - [ ] Home page
+  - [ ] Stock app
+  - [ ] Recipe Calculator
+  - [ ] Tic Tac Toe
+  - [x] Use Tailwind CSS instead of Styled Components
 
 - [ ] Host on GH Pages
 
