@@ -52,8 +52,8 @@ export default function RecipeCalculator() {
   };
 
   return (
-    <div>
-      <div className="flex justify-between">
+    <div className="flex w-screen flex-col justify-start">
+      <div className="flex justify-between gap-3">
         <p>Calories: {totals.calories}</p>
         <p>Fat: {totals.fat}</p>
         <p>Carbs: {totals.carbs}</p>

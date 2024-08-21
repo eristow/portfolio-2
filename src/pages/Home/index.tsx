@@ -1,7 +1,8 @@
 import Button from "src/components/button";
 import ButtonContainer from "src/components/button-container";
-import Header from "src/components/header";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import H1 from "src/components/h1";
+import H2 from "src/components/h2";
 
 type HomeButtonProps = {
   text: string;
@@ -18,28 +19,20 @@ export default function Home() {
   };
 
   function HomeButton(props: HomeButtonProps) {
-    const color = "zinc-900";
-    const borderColor = "zinc-800";
-
     return (
-      <a href={props.path ? props.path : ""}>
-        <Button
-          color={color}
-          borderColor={borderColor}
-          onClick={props.onClick ? props.onClick : () => {}}
-        >
+      <Link to={props.path ? props.path : ""}>
+        <Button onClick={props.onClick ? props.onClick : () => {}}>
           {props.text}
         </Button>
-      </a>
+      </Link>
     );
   }
 
   return (
     <>
-      <Header />
-      <div className="grid h-screen w-screen justify-center">
-        <div className="mb-10 text-center">
-          <h1>My Info</h1>
+      <div className="flex w-screen flex-grow flex-col justify-start">
+        <div className="mb-5 mt-2 text-center">
+          <H1 className="underline">My Info</H1>
           <ButtonContainer>
             <HomeButton
               text="LinkedIn"
@@ -52,56 +45,58 @@ export default function Home() {
           </ButtonContainer>
         </div>
         <div className="text-center">
-          <h1>My Work</h1>
-          <h2>Web DAW</h2>
-          <ButtonContainer>
-            <HomeButton
-              text="Web DAW Site"
-              path="https://web-daw-frontend.herokuapp.com/"
-            />
-            <HomeButton
-              text="Web DAW Front-End Code"
-              path="https://github.com/eristow/web-daw"
-            />
-            <HomeButton
-              text="Web DAW Back-End Code"
-              path="https://github.com/eristow/web-daw-backend"
-            />
-          </ButtonContainer>
-          <h2>Date Night Questions</h2>
-          <ButtonContainer>
-            <HomeButton
-              text="Date Night Site"
-              path="https://master.d7vp4hauoyn5j.amplifyapp.com/"
-            />
-            <HomeButton
-              text="Date Night Code"
-              path="https://github.com/eristow/date-night-coding-challenge"
-            />
-          </ButtonContainer>
-          <h2>Other</h2>
-          <ButtonContainer>
-            <HomeButton
-              text="Habbit Rabbit"
-              path="https://habbit-rabbit.netlify.app"
-            />
-            <HomeButton
-              text="Stock App"
-              onClick={() => handleRedirect("/stocks")}
-            />
-            <HomeButton
-              text="Radio (WIP)"
-              onClick={() => handleRedirect("/radio")}
-            />
-            <HomeButton
-              text="Recipe Calculator"
-              onClick={() => handleRedirect("/recipe-calculator")}
-            />
-            <HomeButton
-              text="Tic Tac Toe"
-              onClick={() => handleRedirect("/tic-tac-toe")}
-            />
-          </ButtonContainer>
+          <H1 className="underline">My Work</H1>
+          <div className="text-left">
+            <H2>Web DAW</H2>
+            <ButtonContainer>
+              <HomeButton
+                text="Web DAW Site"
+                path="https://web-daw-frontend.herokuapp.com/"
+              />
+              <HomeButton
+                text="Web DAW Front-End Code"
+                path="https://github.com/eristow/web-daw"
+              />
+              <HomeButton
+                text="Web DAW Back-End Code"
+                path="https://github.com/eristow/web-daw-backend"
+              />
+            </ButtonContainer>
+            <H2>Date Night Questions</H2>
+            <ButtonContainer>
+              <HomeButton
+                text="Date Night Site"
+                path="https://master.d7vp4hauoyn5j.amplifyapp.com/"
+              />
+              <HomeButton
+                text="Date Night Code"
+                path="https://github.com/eristow/date-night-coding-challenge"
+              />
+            </ButtonContainer>
+            <H2>Other</H2>
+            <ButtonContainer>
+              <HomeButton
+                text="Habbit Rabbit"
+                path="https://habbit-rabbit.netlify.app"
+              />
+              <HomeButton
+                text="Stock App"
+                onClick={() => handleRedirect("/stocks")}
+              />
+              <HomeButton
+                text="Radio (WIP)"
+                onClick={() => handleRedirect("/radio")}
+              />
+              <HomeButton
+                text="Recipe Calculator"
+                onClick={() => handleRedirect("/recipe-calculator")}
+              />
+              <HomeButton
+                text="Tic Tac Toe"
+                onClick={() => handleRedirect("/tic-tac-toe")}
+              />
+            </ButtonContainer>
+          </div>
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
 import { FormEvent, HTMLProps, useState } from "react";
+import H1 from "src/components/h1";
 import Input from "src/components/input";
 
 const Text = (props: HTMLProps<HTMLParagraphElement>) => (
@@ -38,9 +39,9 @@ export default function Stocks() {
   };
 
   return (
-    <div className="grid h-screen w-screen justify-center">
+    <div className="flex w-screen flex-grow flex-col justify-start">
       <div className="text-center">
-        <h1>Stock Calculator</h1>
+        <H1>Stock Calculator</H1>
       </div>
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
         <div>

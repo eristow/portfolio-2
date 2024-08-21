@@ -3,20 +3,26 @@ import RecipeCalculator from "./pages/RecipeCalculator";
 import Stocks from "./pages/Stocks";
 import ErrorPage from "./error-page";
 import Home from "./pages/Home";
+import Layout from "./layout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/stocks",
-    element: <Stocks />,
-  },
-  {
-    path: "/recipe-calculator",
-    element: <RecipeCalculator />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/stocks",
+        element: <Stocks />,
+      },
+      {
+        path: "/recipe-calculator",
+        element: <RecipeCalculator />,
+      },
+    ],
   },
 ]);
 
