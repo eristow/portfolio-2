@@ -11,10 +11,10 @@ type NavButtonProps = {
 function NavButton(props: NavButtonProps) {
   return (
     <Button
-      className="min-w-28 max-w-28 bg-indigo-600 text-neutral-100 hover:border-neutral-300 hover:text-neutral-100"
+      className="min-w-20 max-w-20 bg-indigo-600 text-neutral-100 hover:border-neutral-300 hover:text-neutral-100 sm:min-w-28 sm:max-w-28"
       onClick={props.onClick}
     >
-      <div className="flex">{props.children}</div>
+      <div className="block sm:flex">{props.children}</div>
     </Button>
   );
 }
@@ -30,10 +30,10 @@ export default function Header() {
           Home
         </NavButton>
       </div>
-      <div>
+      <div className="m-auto">
         <H1 className="font-thin">Evan Ristow's Portfolio</H1>
       </div>
-      <div></div>
+      <div className="m-auto"></div>
     </div>
   );
 }
