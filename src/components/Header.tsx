@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { MdOutlineHome } from "react-icons/md";
-import Button from "./button";
-import H1 from "./h1";
+import Button from "./Button";
+import H1 from "./H1";
 
 type NavButtonProps = {
   onClick: () => void;
@@ -11,7 +11,7 @@ type NavButtonProps = {
 function NavButton(props: NavButtonProps) {
   return (
     <Button
-      className="min-w-20 max-w-20 bg-indigo-600 text-neutral-100 hover:border-neutral-300 hover:text-neutral-100 sm:min-w-28 sm:max-w-28"
+      className="min-w-18 max-w-18 bg-indigo-600 text-sm text-neutral-100 hover:border-neutral-300 hover:text-neutral-100 sm:min-w-28 sm:max-w-28 sm:text-xl"
       onClick={props.onClick}
     >
       <div className="block sm:flex">{props.children}</div>
