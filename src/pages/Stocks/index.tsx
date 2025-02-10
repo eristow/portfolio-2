@@ -42,7 +42,7 @@ export default function Stocks() {
 
   return (
     <AppContainer>
-      <ContentContainer className="max-h-96 min-h-96">
+      <ContentContainer>
         <div className="text-center">
           <H1>Stock Calculator</H1>
         </div>

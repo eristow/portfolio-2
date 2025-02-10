@@ -4,7 +4,6 @@ import H1 from "src/components/H1";
 import { calculateWinner } from "./helpers";
 import { useState } from "react";
 import Board from "./Board";
-import "./index.css";
 import { H3 } from "./H3";
 import Button from "src/components/Button";
 

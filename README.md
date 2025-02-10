@@ -2,22 +2,6 @@
 Created with React, TypeScript, Styled Components, and Vite.
 Hosted on GitHub Pages.
 
-## TODO
-- [ ] Grab code from old portfolio
-  - [ ] Radio
-  - [ ] Tic Tac Toe
-  - [x] Header
-
-- [ ] Improve styling
-  - [ ] Tic Tac Toe
-  - [ ] Radio
-  - [x] Home page
-  - [x] Stock app
-  - [x] Recipe Calculator
-  - [x] Use Tailwind CSS instead of Styled Components
-
-- [ ] Host on GH Pages
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
